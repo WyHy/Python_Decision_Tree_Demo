@@ -2,6 +2,7 @@
 
 from sklearn import tree
 from sklearn.externals import joblib
+from sklearn.metrics import accuracy_score
 import os
 import random
 
@@ -57,6 +58,7 @@ if __name__ == '__main__':
             count += 1
 
     print("%s / %s" % (count, total))
+    print(accuracy_score(Y_test, Y_predict))
 
 
 
