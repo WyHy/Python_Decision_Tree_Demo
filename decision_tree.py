@@ -48,17 +48,19 @@ if __name__ == '__main__':
     else:
         clf = train(X, Y)
 
-    Y_predict = clf.predict(X_test)
+    # Y_predict = clf.predict(X_test)
+    Y_predict = clf.predict_proba(X_test)
+    print(Y_predict)
 
-    total = len(Y_test)
-    count = 0
-    for i in range(total):
-        print(Y_predict[i], Y_test[i])
-        if Y_predict[i] == Y_test[i]:
-            count += 1
-
-    print("%s / %s" % (count, total))
-    print(accuracy_score(Y_test, Y_predict))
+    # total = len(Y_test)
+    # count = 0
+    # for i in range(total):
+    #     print(Y_predict[i], Y_test[i])
+    #     if Y_predict[i] == Y_test[i]:
+    #         count += 1
+    #
+    # print("%s / %s" % (count, total))
+    # print(accuracy_score(Y_test, Y_predict))
 
 
 
